@@ -46,7 +46,7 @@ def main():
 
     for index in range(1, n_levels + 1):
         filename = glob.glob(f'level-{index}.*')[0]
-        load_file(filename, collection, f"level-{index + 1}", descriptions, cur, index)
+        load_file(filename, collection, f"level-{index}", descriptions, cur, index)
         desc_db.commit()
 
     cur.close()
